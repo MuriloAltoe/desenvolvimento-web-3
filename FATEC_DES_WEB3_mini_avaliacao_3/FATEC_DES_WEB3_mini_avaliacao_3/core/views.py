@@ -6,11 +6,11 @@ conn = sqlite3.connect("db.sqlite3")
 
 cur = conn.cursor()
 
-# cur.execute("SELECT * FROM core_feriadomodel WHERE dia = " 
-#              + str(datetime.now().day) + " AND mes = " 
-#              + str(datetime.now().month))
+cur.execute("SELECT * FROM core_feriadomodel WHERE dia = " 
+             + str(datetime.now().day) + " AND mes = " 
+             + str(datetime.now().month))
 
-cur.execute("SELECT * FROM core_feriadomodel WHERE dia = 25 AND mes = 12")
+# cur.execute("SELECT * FROM core_feriadomodel WHERE dia = 25 AND mes = 12")
 
 fetch = cur.fetchall()
 
